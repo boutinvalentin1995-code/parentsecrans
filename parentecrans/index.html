@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParentEcrans.fr – Aidez votre enfant à décrocher des écrans</title>
+  <meta name="description" content="Votre enfant passe trop de temps devant les écrans ? Faites le test gratuit et découvrez nos guides pratiques pour retrouver l'équilibre en famille.">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav__logo">Parent<span>Écrans</span></a>
+  <ul class="nav__links">
+    <li><a href="#quiz">Test gratuit</a></li>
+    <li><a href="pages/articles.html">Articles</a></li>
+    <li><a href="pages/boutique.html">Guides</a></li>
+    <li><a href="pages/a-propos.html">À propos</a></li>
+    <li><a href="pages/boutique.html" class="nav__cta">Voir les guides</a></li>
+  </ul>
+  <button class="nav__burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="quiz">
+  <div class="hero__left animate-up">
+    <div class="hero__badge">Test gratuit en 2 minutes</div>
+    <h1>Votre enfant est-il <em>accro</em> aux écrans ?</h1>
+    <p class="hero__sub">Chaque jour, des milliers de mères voient leur enfant s'éloigner, irritable, incapable de décrocher. Faites le test et recevez un plan d'action personnalisé.</p>
+    <div class="hero__stats">
+      <div>
+        <span class="stat__num">3h42</span>
+        <span class="stat__label">temps moyen/jour chez les ados</span>
+      </div>
+      <div>
+        <span class="stat__num">68%</span>
+        <span class="stat__label">des parents se sentent dépassés</span>
+      </div>
+      <div>
+        <span class="stat__num">2400+</span>
+        <span class="stat__label">familles accompagnées</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__right">
+    <div class="quiz-card">
+      <div class="quiz-card__header">
+        <div class="quiz-card__icon">📱</div>
+        <h2>Testez la dépendance de votre enfant</h2>
+        <p>10 questions · Résultat immédiat</p>
+      </div>
+
+      <!-- Progress -->
+      <div class="quiz-progress" id="quiz-progress">
+        <div class="quiz-progress__bar quiz-progress__bar--active"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+        <div class="quiz-progress__bar"></div>
+      </div>
+
+      <div id="quiz-steps-wrap">
+
+        <!-- Q1 -->
+        <div class="quiz-step quiz-step--active" data-q="0">
+          <p class="quiz-question">1/10 — Combien d'heures par jour votre enfant passe-t-il devant un écran ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Moins d'1 heure</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>1 à 2 heures</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>3 à 4 heures</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Plus de 4 heures</button>
+          </div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="quiz-step" data-q="1">
+          <p class="quiz-question">2/10 — Réagit-il mal (colère, pleurs) quand vous lui demandez d'arrêter ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Jamais</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Parfois</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Souvent</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Systématiquement</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="quiz-step" data-q="2">
+          <p class="quiz-question">3/10 — A-t-il du mal à s'occuper sans écran le week-end ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non, il trouve facilement</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Un peu, après quelques minutes</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Oui, il s'ennuie rapidement</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>C'est impossible sans conflit</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="quiz-step" data-q="3">
+          <p class="quiz-question">4/10 — Son sommeil a-t-il changé depuis qu'il utilise beaucoup les écrans ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non, il dort bien</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Il se couche un peu plus tard</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Il dort mal, se couche trop tard</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Il cache son téléphone la nuit</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="quiz-step" data-q="4">
+          <p class="quiz-question">5/10 — Utilise-t-il les écrans en cachette ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Je ne sais pas</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Oui, parfois</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Oui, souvent</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="quiz-step" data-q="5">
+          <p class="quiz-question">6/10 — Ses résultats scolaires ont-ils baissé ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non, aucun changement</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Légère baisse</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Baisse notable</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Il ne fait plus ses devoirs</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="quiz-step" data-q="6">
+          <p class="quiz-question">7/10 — A-t-il abandonné des activités qu'il aimait ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Un peu moins d'activités</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Oui, plusieurs abandonnées</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Il ne fait plus que les écrans</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="quiz-step" data-q="7">
+          <p class="quiz-question">8/10 — Son humeur est-elle influencée par le temps d'écran ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Légèrement</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Oui, irritable sans écran</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Anxieux ou déprimé sans écran</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="quiz-step" data-q="8">
+          <p class="quiz-question">9/10 — Avez-vous essayé de limiter le temps d'écran sans succès ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Non, pas nécessaire</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>Oui, avec quelques tensions</button>
+            <button class="quiz-option" data-score="2"><div class="quiz-option__dot"></div>Oui, sans succès durable</button>
+            <button class="quiz-option" data-score="3"><div class="quiz-option__dot"></div>Oui, c'est devenu invivable</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Suivant →</button>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="quiz-step" data-q="9">
+          <p class="quiz-question">10/10 — Quel âge a votre enfant ?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-score="0"><div class="quiz-option__dot"></div>Moins de 6 ans</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>6 à 10 ans</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>11 à 14 ans</button>
+            <button class="quiz-option" data-score="1"><div class="quiz-option__dot"></div>15 ans et plus</button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-btn-prev">← Retour</button>
+            <button class="quiz-btn-next" disabled>Voir mon résultat →</button>
+          </div>
+        </div>
+
+      </div><!-- /quiz-steps-wrap -->
+
+      <!-- EMAIL STEP -->
+      <div class="quiz-email" id="quiz-email-step">
+        <div class="quiz-result-preview">
+          <div class="quiz-result-preview__level">
+            <div class="result-dot" id="result-dot"></div>
+            <span class="result-label" id="result-label"></span>
+          </div>
+          <p class="result-desc" id="result-desc"></p>
+        </div>
+        <label class="quiz-email__label">Recevez votre analyse complète + conseils personnalisés</label>
+        <input type="email" class="quiz-email__input" id="quiz-email-input" placeholder="votre@email.fr">
+        <button class="quiz-btn-submit" onclick="submitQuizEmail()">Recevoir mon résultat gratuit →</button>
+        <p class="quiz-privacy">🔒 Vos données sont protégées. Zéro spam, désabonnement en 1 clic.</p>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="quiz-success" id="quiz-success">
+        <div class="quiz-success__icon">✉️</div>
+        <h3>C'est parti !</h3>
+        <p>Votre résultat est en route. Vérifiez votre boîte mail dans quelques instants.</p>
+      </div>
+
+    </div><!-- /quiz-card -->
+  </div><!-- /hero__right -->
+</section>
+
+<!-- POURQUOI NOUS -->
+<section class="section section--dark">
+  <div class="section-label" style="color:var(--terracotta-light)">Notre approche</div>
+  <h2 style="color:var(--cream);margin-bottom:16px;">Pas de culpabilité. Des <em>solutions concrètes</em>.</h2>
+  <p class="section-intro" style="color:#B8A898;margin-bottom:0;">Vous n'avez pas raté votre éducation. Les écrans sont conçus pour créer l'addiction par des équipes de centaines d'ingénieurs. Vous méritez les mêmes armes.</p>
+  <div class="why__grid">
+    <div class="why__item">
+      <div class="why__num">01</div>
+      <h3>Compréhension avant tout</h3>
+      <p>Avant d'agir, il faut comprendre pourquoi votre enfant est attiré par les écrans. Nos guides expliquent les mécanismes neurologiques en termes simples.</p>
+    </div>
+    <div class="why__item">
+      <div class="why__num">02</div>
+      <h3>Des méthodes testées</h3>
+      <p>Chaque stratégie est issue de la recherche en psychologie comportementale, validée auprès de milliers de familles françaises.</p>
+    </div>
+    <div class="why__item">
+      <div class="why__num">03</div>
+      <h3>Adapté à votre situation</h3>
+      <p>Un enfant de 7 ans n'a pas la même relation aux écrans qu'un ado de 15 ans. Nos guides sont ciblés par tranche d'âge et type d'addiction.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="section section--white">
+  <div class="section__header">
+    <div>
+      <div class="section-label">Articles</div>
+      <h2>Comprendre pour mieux <em>agir</em></h2>
+    </div>
+    <a href="pages/articles.html" class="see-all">Tous les articles →</a>
+  </div>
+  <div class="articles__grid">
+    <a class="article-card article-card--featured" href="#">
+      <div class="article-card__img" style="background:linear-gradient(135deg,#FDE8E4,#F5CABD);">
+        🧠
+        <span class="tag">Psychologie</span>
+      </div>
+      <div class="article-card__body">
+        <p class="article-card__meta">12 mai 2025 · 8 min de lecture</p>
+        <h3>Dopamine et écrans : pourquoi votre enfant ne peut pas s'arrêter (même s'il le voulait)</h3>
+        <p>Les applications sont conçues pour déclencher des pics de dopamine en rafale. Comprendre ce mécanisme est la première étape pour aider votre enfant à reprendre le contrôle.</p>
+        <span class="article-card__read">Lire l'article →</span>
+      </div>
+    </a>
+    <a class="article-card" href="#">
+      <div class="article-card__img" style="background:linear-gradient(135deg,#E4EDE5,#BFD5C2);">
+        😴<span class="tag">Sommeil</span>
+      </div>
+      <div class="article-card__body">
+        <p class="article-card__meta">5 mai 2025 · 5 min</p>
+        <h3>Téléphone la nuit : comment reprendre le contrôle sans crise</h3>
+        <p>3 règles simples pour restaurer un sommeil sain, sans guerre froide.</p>
+        <span class="article-card__read">Lire →</span>
+      </div>
+    </a>
+    <a class="article-card" href="#">
+      <div class="article-card__img" style="background:linear-gradient(135deg,#EDE4F5,#C8B8D8);">
+        🎮<span class="tag">Jeux vidéo</span>
+      </div>
+      <div class="article-card__body">
+        <p class="article-card__meta">28 avril 2025 · 6 min</p>
+        <h3>Fortnite, Roblox, Minecraft : faut-il vraiment interdire ?</h3>
+        <p>La réponse n'est pas celle que vous croyez. Ce que disent les études.</p>
+        <span class="article-card__read">Lire →</span>
+      </div>
+    </a>
+    <a class="article-card" href="#">
+      <div class="article-card__img" style="background:linear-gradient(135deg,#FDF5E4,#F0DFB0);">
+        📱<span class="tag">Réseaux sociaux</span>
+      </div>
+      <div class="article-card__body">
+        <p class="article-card__meta">20 avril 2025 · 7 min</p>
+        <h3>À quel âge donner un smartphone ? Ce que disent les experts en 2025</h3>
+        <p>Le débat dépasse la question de l'âge. Voici les vraies questions à se poser.</p>
+        <span class="article-card__read">Lire →</span>
+      </div>
+    </a>
+    <a class="article-card" href="#">
+      <div class="article-card__img" style="background:linear-gradient(135deg,#E4F0F5,#B8D5DF);">
+        💬<span class="tag">Communication</span>
+      </div>
+      <div class="article-card__body">
+        <p class="article-card__meta">15 avril 2025 · 4 min</p>
+        <h3>Les 5 phrases à ne jamais dire à un enfant accro aux écrans</h3>
+        <p>Et ce qu'il faut dire à la place pour qu'il vous écoute vraiment.</p>
+        <span class="article-card__read">Lire →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- GUIDES -->
+<section class="section section--warm">
+  <div class="section-label">Guides pratiques</div>
+  <h2>Des solutions selon <em>votre situation</em></h2>
+  <p class="section-intro">Chaque guide est conçu pour une situation spécifique. Téléchargement immédiat après achat.</p>
+  <div class="guides__grid">
+    <div class="guide-card">
+      <div class="guide-card__cover guide-card__cover--1">
+        🧒
+        <span class="guide-card__badge">PDF · 68 pages</span>
+      </div>
+      <div class="guide-card__body">
+        <div class="guide-card__level">Pour les 3 – 10 ans</div>
+        <h3>Les Petits et les Écrans</h3>
+        <p>Comment poser des limites saines dès le plus jeune âge, sans bataille quotidienne.</p>
+      </div>
+      <div class="guide-card__footer">
+        <div class="guide-card__price">19€ <small>/ guide</small></div>
+        <a href="VOTRE_LIEN_STRIPE_GUIDE1" class="btn btn-dark">Acheter</a>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-card__cover guide-card__cover--2">
+        🎮
+        <span class="guide-card__badge">PDF · 84 pages</span>
+      </div>
+      <div class="guide-card__body">
+        <div class="guide-card__level">Jeux vidéo · 8 – 15 ans</div>
+        <h3>Mon Enfant et les Jeux Vidéo</h3>
+        <p>Comprendre l'addiction aux jeux et établir un contrat familial qui fonctionne.</p>
+      </div>
+      <div class="guide-card__footer">
+        <div class="guide-card__price">19€ <small>/ guide</small></div>
+        <a href="VOTRE_LIEN_STRIPE_GUIDE2" class="btn btn-dark">Acheter</a>
+      </div>
+    </div>
+    <div class="guide-card">
+      <div class="guide-card__cover guide-card__cover--3">
+        📸
+        <span class="guide-card__badge">PDF · 76 pages</span>
+      </div>
+      <div class="guide-card__body">
+        <div class="guide-card__level">Réseaux sociaux · 11 – 17 ans</div>
+        <h3>Instagram, TikTok & Co.</h3>
+        <p>Protéger votre ado des réseaux sociaux sans l'isoler de ses amis.</p>
+      </div>
+      <div class="guide-card__footer">
+        <div class="guide-card__price">19€ <small>/ guide</small></div>
+        <a href="VOTRE_LIEN_STRIPE_GUIDE3" class="btn btn-dark">Acheter</a>
+      </div>
+    </div>
+    <div class="guide-card guide-card--featured">
+      <div class="guide-card__cover guide-card__cover--4">
+        📦
+        <span class="guide-card__badge">3 guides inclus</span>
+      </div>
+      <div class="guide-card__body">
+        <div class="guide-card__level">Bundle complet</div>
+        <h3>Pack Famille Connectée</h3>
+        <p>Les 3 guides + plan d'action 30 jours + accès communauté privée.</p>
+      </div>
+      <div class="guide-card__footer">
+        <div class="guide-card__price">47€ <small>vs 57€</small></div>
+        <a href="VOTRE_LIEN_STRIPE_BUNDLE" class="btn btn-primary">Acheter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="section section--white">
+  <div class="section-label">Témoignages</div>
+  <h2>Des mères qui ont <em>retrouvé la paix</em></h2>
+  <div class="testimonials__grid">
+    <div class="testi-card">
+      <div class="testi-card__stars">★★★★★</div>
+      <p class="testi-card__text">« Après 2 ans de conflits quotidiens, le guide m'a donné un cadre clair. En 3 semaines, mon fils de 13 ans jouait 2h de moins par jour. »</p>
+      <div class="testi-card__author">
+        <div class="testi-card__avatar">👩</div>
+        <div>
+          <div class="testi-card__name">Marie-Hélène, 42 ans</div>
+          <div class="testi-card__info">Mère de 2 enfants · Lyon</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-card__stars">★★★★★</div>
+      <p class="testi-card__text">« Je me sentais seule et dépassée. Le quiz m'a aidée à mettre des mots sur ce que vivait ma fille. »</p>
+      <div class="testi-card__author">
+        <div class="testi-card__avatar">👩‍🦱</div>
+        <div>
+          <div class="testi-card__name">Sophie, 38 ans</div>
+          <div class="testi-card__info">Mère de 3 enfants · Paris</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-card__stars">★★★★★</div>
+      <p class="testi-card__text">« Le pack famille vaut vraiment la peine. On a enfin des repas sans téléphone et mon fils dort à des heures normales. »</p>
+      <div class="testi-card__author">
+        <div class="testi-card__avatar">👩‍🦰</div>
+        <div>
+          <div class="testi-card__name">Isabelle, 47 ans</div>
+          <div class="testi-card__info">Mère de 4 enfants · Bordeaux</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <h2>Commencez par le test gratuit</h2>
+  <p>2 minutes pour comprendre où en est votre enfant et recevoir des conseils adaptés à votre situation.</p>
+  <a href="#quiz" class="btn btn-white">Faire le test maintenant →</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <a href="index.html" class="footer__logo">Parent<span>Écrans</span></a>
+      <p>Des ressources concrètes pour aider les parents à accompagner leurs enfants vers un usage sain des écrans.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#quiz">Test gratuit</a></li>
+        <li><a href="pages/articles.html">Articles</a></li>
+        <li><a href="pages/boutique.html">Guides</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Guides</h4>
+      <ul>
+        <li><a href="#">Petits & écrans (3-10 ans)</a></li>
+        <li><a href="#">Jeux vidéo (8-15 ans)</a></li>
+        <li><a href="#">Réseaux sociaux (11-17 ans)</a></li>
+        <li><a href="#">Pack famille complet</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Informations</h4>
+      <ul>
+        <li><a href="pages/a-propos.html">À propos</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">CGV</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2025 ParentÉcrans.fr — Tous droits réservés</span>
+    <span>Fait avec ❤️ pour les parents</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

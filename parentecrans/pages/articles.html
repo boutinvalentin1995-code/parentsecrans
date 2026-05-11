@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles – ParentÉcrans.fr</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav__logo">Parent<span>Écrans</span></a>
+  <ul class="nav__links">
+    <li><a href="../index.html#quiz">Test gratuit</a></li>
+    <li><a href="articles.html" class="active">Articles</a></li>
+    <li><a href="boutique.html">Guides</a></li>
+    <li><a href="boutique.html" class="nav__cta">Voir les guides</a></li>
+  </ul>
+  <button class="nav__burger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Blog</div>
+  <h1>Comprendre pour mieux <em>agir</em></h1>
+  <p>Articles pratiques, études et conseils d'experts pour accompagner votre enfant vers un usage sain des écrans.</p>
+</div>
+
+<div class="blog-controls">
+  <div class="search-wrap">
+    <input type="text" placeholder="Rechercher un article…">
+  </div>
+  <div class="cats">
+    <button class="cat-btn cat-btn--active">Tous</button>
+    <button class="cat-btn">Psychologie</button>
+    <button class="cat-btn">Jeux vidéo</button>
+    <button class="cat-btn">Réseaux sociaux</button>
+    <button class="cat-btn">Sommeil</button>
+    <button class="cat-btn">Communication</button>
+  </div>
+</div>
+
+<div class="blog-layout">
+  <div class="articles-list">
+
+    <!-- Featured -->
+    <a class="article-featured" href="#">
+      <div class="article-featured__img">🧠</div>
+      <div class="article-featured__body">
+        <span class="tag" style="margin-bottom:10px;">Psychologie</span>
+        <p class="article-featured__meta">12 mai 2025 · 8 min de lecture</p>
+        <h3>Dopamine et écrans : pourquoi votre enfant ne peut pas s'arrêter (même s'il le voulait)</h3>
+        <p>Les applications sont conçues pour déclencher des pics de dopamine en rafale. Comprendre ce mécanisme est la première étape pour aider votre enfant.</p>
+      </div>
+    </a>
+
+    <!-- Articles ⚠️ WordPress : boucle WP_Query ici -->
+    <a class="blog-article-card" href="#">
+      <div class="blog-article-thumb" style="background:linear-gradient(135deg,#E4EDE5,#BFD5C2);">😴</div>
+      <div>
+        <span class="tag" style="margin-bottom:8px;">Sommeil</span>
+        <h3>Téléphone la nuit : comment reprendre le contrôle sans déclencher une crise</h3>
+        <p>3 règles concrètes pour restaurer un sommeil sain.</p>
+        <div class="art-meta">5 mai 2025 · 5 min</div>
+      </div>
+    </a>
+    <a class="blog-article-card" href="#">
+      <div class="blog-article-thumb" style="background:linear-gradient(135deg,#EDE4F5,#C8B8D8);">🎮</div>
+      <div>
+        <span class="tag" style="margin-bottom:8px;">Jeux vidéo</span>
+        <h3>Fortnite, Roblox, Minecraft : faut-il vraiment interdire ?</h3>
+        <p>La réponse n'est pas celle que vous croyez.</p>
+        <div class="art-meta">28 avril 2025 · 6 min</div>
+      </div>
+    </a>
+    <a class="blog-article-card" href="#">
+      <div class="blog-article-thumb" style="background:linear-gradient(135deg,#FDF5E4,#F0DFB0);">📱</div>
+      <div>
+        <span class="tag" style="margin-bottom:8px;">Réseaux sociaux</span>
+        <h3>À quel âge donner un smartphone ? Ce que disent les experts en 2025</h3>
+        <p>Voici les vraies questions à se poser.</p>
+        <div class="art-meta">20 avril 2025 · 7 min</div>
+      </div>
+    </a>
+    <a class="blog-article-card" href="#">
+      <div class="blog-article-thumb" style="background:linear-gradient(135deg,#E4F0F5,#B8D5DF);">💬</div>
+      <div>
+        <span class="tag" style="margin-bottom:8px;">Communication</span>
+        <h3>Les 5 phrases à ne jamais dire à un enfant accro aux écrans</h3>
+        <p>Et ce qu'il faut dire à la place.</p>
+        <div class="art-meta">15 avril 2025 · 4 min</div>
+      </div>
+    </a>
+    <a class="blog-article-card" href="#">
+      <div class="blog-article-thumb" style="background:linear-gradient(135deg,#FDE8E4,#F5CABD);">📚</div>
+      <div>
+        <span class="tag" style="margin-bottom:8px;">École</span>
+        <h3>Devoirs et écrans : comment aider un enfant à se concentrer</h3>
+        <p>Les distractions numériques divisent par 3 la capacité d'attention.</p>
+        <div class="art-meta">8 avril 2025 · 5 min</div>
+      </div>
+    </a>
+
+    <div class="pagination">
+      <button class="page-btn page-btn--active">1</button>
+      <button class="page-btn">2</button>
+      <button class="page-btn">3</button>
+      <button class="page-btn">→</button>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-block sidebar-block--dark">
+      <h3>📬 Newsletter</h3>
+      <p>Un conseil pratique chaque semaine. Zéro spam.</p>
+      <input class="sidebar__input" type="email" placeholder="votre@email.fr">
+      <button class="sidebar__btn">Je m'abonne →</button>
+    </div>
+    <div class="sidebar-block">
+      <h3>Articles populaires</h3>
+      <a class="top-article" href="#"><span class="top-article__num">01</span><div><div class="top-article__title">Dopamine et écrans : pourquoi votre enfant ne peut pas s'arrêter</div><div class="top-article__meta">8 min · Psychologie</div></div></a>
+      <a class="top-article" href="#"><span class="top-article__num">02</span><div><div class="top-article__title">À quel âge donner un smartphone ?</div><div class="top-article__meta">7 min · Réseaux sociaux</div></div></a>
+      <a class="top-article" href="#"><span class="top-article__num">03</span><div><div class="top-article__title">Les 5 phrases à ne jamais dire</div><div class="top-article__meta">4 min · Communication</div></div></a>
+    </div>
+    <div class="sidebar-block">
+      <h3>Catégories</h3>
+      <!-- ⚠️ WordPress : wp_list_categories() -->
+      <ul class="cat-list">
+        <li>Psychologie <span class="cat-count">12</span></li>
+        <li>Jeux vidéo <span class="cat-count">8</span></li>
+        <li>Réseaux sociaux <span class="cat-count">7</span></li>
+        <li>Sommeil <span class="cat-count">5</span></li>
+        <li>Communication <span class="cat-count">6</span></li>
+      </ul>
+    </div>
+    <div class="sidebar-block sidebar-block--warm">
+      <h3>Passez à l'action</h3>
+      <p>Nos guides pratiques vous donnent un plan concret, étape par étape.</p>
+      <a href="boutique.html" class="btn btn-primary" style="width:100%;text-align:center;">Voir les guides →</a>
+    </div>
+  </aside>
+</div>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand"><a href="../index.html" class="footer__logo">Parent<span>Écrans</span></a><p>Des ressources concrètes pour aider les parents à accompagner leurs enfants vers un usage sain des écrans.</p></div>
+    <div class="footer__col"><h4>Navigation</h4><ul><li><a href="../index.html#quiz">Test gratuit</a></li><li><a href="articles.html">Articles</a></li><li><a href="boutique.html">Guides</a></li></ul></div>
+    <div class="footer__col"><h4>Guides</h4><ul><li><a href="#">Petits & écrans</a></li><li><a href="#">Jeux vidéo</a></li><li><a href="#">Réseaux sociaux</a></li><li><a href="#">Pack famille</a></li></ul></div>
+    <div class="footer__col"><h4>Infos</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Mentions légales</a></li><li><a href="#">CGV</a></li></ul></div>
+  </div>
+  <div class="footer__bottom"><span>© 2025 ParentÉcrans.fr</span><span>Fait avec ❤️ pour les parents</span></div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

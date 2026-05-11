@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – ParentÉcrans.fr</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav__logo">Parent<span>Écrans</span></a>
+  <ul class="nav__links">
+    <li><a href="../index.html#quiz">Test gratuit</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="boutique.html">Guides</a></li>
+    <li><a href="boutique.html" class="nav__cta">Voir les guides</a></li>
+  </ul>
+  <button class="nav__burger"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="contact-layout">
+
+  <div class="contact-left">
+    <div class="section-label">Contact</div>
+    <h1>Une question ? <em>Je vous réponds.</em></h1>
+    <p>Que ce soit pour une question sur les guides, un problème après achat, ou simplement partager votre situation — je lis chaque message et réponds sous 48h.</p>
+
+    <div class="contact-infos">
+      <div class="contact-info-item">
+        <div class="info-icon">📧</div>
+        <div><div class="info-label">Email</div><div class="info-value"><a href="mailto:contact@parentecrans.fr">contact@parentecrans.fr</a></div></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="info-icon">⏱️</div>
+        <div><div class="info-label">Délai de réponse</div><div class="info-value">Sous 48h (jours ouvrés)</div></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="info-icon">↩️</div>
+        <div><div class="info-label">Remboursement</div><div class="info-value">30 jours, sans question</div></div>
+      </div>
+    </div>
+
+    <div class="faq-teaser">
+      <h3>Vous cherchez une réponse rapide ?</h3>
+      <p>La plupart des questions sont déjà dans notre FAQ — accès immédiat au guide, remboursement, contenu…</p>
+      <a href="boutique.html#faq">Consulter la FAQ →</a>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h2>Envoyez-moi un message</h2>
+    <p>Je réponds personnellement à chaque email.</p>
+
+    <div id="contact-form-inner">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom *</label>
+          <input type="text" placeholder="Marie">
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="contact-email" placeholder="marie@email.fr">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Sujet</label>
+        <div class="subject-chips">
+          <button class="chip chip--active" type="button">Question générale</button>
+          <button class="chip" type="button">Problème de téléchargement</button>
+          <button class="chip" type="button">Remboursement</button>
+          <button class="chip" type="button">Partenariat</button>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top:16px;">
+        <label>L'âge de votre enfant</label>
+        <select>
+          <option value="" disabled selected>Sélectionner…</option>
+          <option>Moins de 6 ans</option>
+          <option>6 à 10 ans</option>
+          <option>11 à 14 ans</option>
+          <option>15 ans et plus</option>
+          <option>Plusieurs enfants</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Votre message *</label>
+        <textarea placeholder="Décrivez votre situation ou votre question…"></textarea>
+      </div>
+
+      <button class="btn-submit-form" onclick="submitContactForm()">Envoyer mon message →</button>
+      <p class="form-note">🔒 Vos données ne sont jamais revendues.</p>
+    </div>
+
+    <div class="form-success" id="contact-success">
+      <div class="form-success__icon">✉️</div>
+      <h3>Message envoyé !</h3>
+      <p>Merci de m'avoir écrit. Je vous réponds personnellement sous 48h (jours ouvrés).</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div class="footer__brand"><a href="../index.html" class="footer__logo">Parent<span>Écrans</span></a><p>Des ressources concrètes pour aider les parents à accompagner leurs enfants vers un usage sain des écrans.</p></div>
+    <div class="footer__col"><h4>Navigation</h4><ul><li><a href="../index.html#quiz">Test gratuit</a></li><li><a href="articles.html">Articles</a></li><li><a href="boutique.html">Guides</a></li></ul></div>
+    <div class="footer__col"><h4>Guides</h4><ul><li><a href="#">Petits & écrans</a></li><li><a href="#">Jeux vidéo</a></li><li><a href="#">Réseaux sociaux</a></li><li><a href="#">Pack famille</a></li></ul></div>
+    <div class="footer__col"><h4>Infos</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li><li><a href="#">Mentions légales</a></li><li><a href="#">CGV</a></li></ul></div>
+  </div>
+  <div class="footer__bottom"><span>© 2025 ParentÉcrans.fr</span><span>Fait avec ❤️ pour les parents</span></div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
