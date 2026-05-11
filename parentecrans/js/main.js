@@ -207,19 +207,67 @@ function showResult() {
   if (desc)  desc.textContent      = result.desc;
 }
 
-function submitQuizEmail() {
+async function submitQuizEmail() {
   const input = document.getElementById('quiz-email-input');
   if (!input) return;
   if (!input.value || !input.value.includes('@')) {
     input.style.borderColor = 'var(--terracotta)';
     return;
   }
-  // ⚠️ Brevo : remplacer par l'appel API Brevo ici
-  // fetch('https://api.brevo.com/v3/contacts', { ... })
-  const emailStep   = document.getElementById('quiz-email-step');
-  const successStep = document.getElementById('quiz-success');
-  if (emailStep)   emailStep.classList.remove('quiz-email--active');
-  if (successStep) successStep.classList.add('quiz-success--active');
+
+  // Calcul du score
+  const steps = document.querySelectorAll('.quiz-step');
+  const scores = [];
+  steps.forEach(step => {
+    const sel = step.querySelector('.quiz-option--selected');
+    scores.push(sel ? parseInt(sel.dataset.score || 0) : 0);
+  });
+  const total = scores.reduce((a, b) => a + b, 0);
+
+  // Segment selon score
+  let segment = 'usage_modere';
+  if (total > 8 && total <= 18) segment = 'dependance_moderee';
+  if (total > 18) segment = 'dependance_forte';
+
+  const btnSubmit = document.querySelector('.quiz-btn-submit');
+  if (btnSubmit) { btnSubmit.disabled = true; btnSubmit.textContent = 'Envoi en cours…'; }
+
+  try {
+    const response = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'api-key': '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'
+      },
+      body: JSON.stringify({
+        email: input.value.trim(),
+        listIds: [1],
+        updateEnabled: true,
+        attributes: {
+          SCORE_QUIZ: total,
+          SEGMENT: segment
+        }
+      })
+    });
+
+    // 201 = créé, 204 = mis à jour — les deux sont OK
+    if (response.status === 201 || response.status === 204) {
+      const emailStep   = document.getElementById('quiz-email-step');
+      const successStep = document.getElementById('quiz-success');
+      if (emailStep)   emailStep.classList.remove('quiz-email--active');
+      if (successStep) successStep.classList.add('quiz-success--active');
+    } else {
+      const err = await response.json();
+      console.error('Brevo error:', err);
+      if (btnSubmit) { btnSubmit.disabled = false; btnSubmit.textContent = 'Recevoir mon résultat gratuit →'; }
+      alert('Une erreur est survenue. Veuillez réessayer.');
+    }
+  } catch (e) {
+    console.error('Network error:', e);
+    if (btnSubmit) { btnSubmit.disabled = false; btnSubmit.textContent = 'Recevoir mon résultat gratuit →'; }
+    alert('Une erreur est survenue. Veuillez réessayer.');
+  }
 }
 
 function submitContactForm() {
